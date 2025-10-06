@@ -1,0 +1,67 @@
+name: Build Schemata and Documentation
+on:
+  push:
+    branches:
+      - dev
+    paths:
+      - 'tei/odd/**'
+      - '.github/scripts/create_outputs.sh'
+      - '.github/scripts/create_index.sh'
+      - '.github/lib/xslt/**'
+      - '.github/workflows/build-rng-html.yml'
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  BRANCH_NAME: dev
+
+jobs:
+  update-odd:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout TEI Stylesheets
+        uses: actions/checkout@v4
+        with:
+          repository: TEIC/Stylesheets
+          fetch-depth: 0
+          ref: 'v7.58.0' 
+          path: ./tei
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BRANCH_NAME }}
+          path: ${{ env.BRANCH_NAME }}
+
+      - name: Update Schemata and Docs
+        run: |
+          git config --global user.name 'ODD Bot'
+          git config --global user.email '<>'
+          wget "https://github.com/Saxonica/Saxon-HE/raw/main/12/Java/SaxonHE12-1J.zip"
+          unzip *.zip
+          cd $BRANCH_NAME
+          mkdir -p tei/rng tei/documentation tei/odd/compiled
+          find tei/rng -maxdepth 1 -type f -name '*.rng' -delete
+          find tei/documentation -maxdepth 1 -type f -name '*.html' -delete
+          find tei/odd/compiled -maxdepth 1 -type f -name '*.compiled.odd' -delete
+          OIFS="$IFS"
+          IFS=$'\n'
+          pushd tei/odd
+          ODDS_TO_PROCESS=$( {
+            find . -maxdepth 1 -name 'letters.odd' -print
+            find . -maxdepth 1 -name '*.odd' ! -name 'letters.odd' -print | sort
+          });
+          echo $ODDS_TO_PROCESS
+          for odd_name in $ODDS_TO_PROCESS; do
+            ../../.github/scripts/create_outputs.sh ${odd_name}
+          done;
+          popd
+          IFS="$OIFS"
+          .github/scripts/create_index.sh
+          git add tei/rng tei/documentation tei/odd/compiled tei/README.md
+          git diff-index --quiet HEAD || (git commit -am "ci: generate other schemata and documentation" && git push)
+        env:
+          BUILD_CORE: ${{ vars.BUILD_CORE }}

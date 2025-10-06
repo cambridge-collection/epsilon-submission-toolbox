@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/cambridge-collection/epsilon-submission-toolbox/refs/heads/main/tei/rng/letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/cambridge-collection/epsilon-submission-toolbox/refs/heads/main/tei/rng/letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="DCP-LETT-QQQQ">
+    <!-- The @xml:id should be the same as the file name, with a text portion replacing 'DCP-LETT' with a name more appropriate to your project, and 'QQQQ' being an individual identifier for the letter. -->
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:id="main_title"><!-- TODO: Title goes here. Often this will read 'Letter from x to y, date' or similar -->  </title>
+            </titleStmt>
+            <publicationStmt>
+                <!-- Description of the publication, with place, project name etc. -->
+                <authority><!-- Project name --></authority>
+                <pubPlace><!-- Location of project --></pubPlace>
+                <availability status="restricted"><!-- Change to 'unrestricted' and alter text in 'p' if text is already free from copyright -->
+                    <p>Available under license only</p>
+                </availability>
+                <availability xml:id="metadataRights" status="restricted">
+                    <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/">This
+                        metadata is licensed under a Creative Commons
+                        Attribution-NonCommercial-NoDerivs 3.0 Unported License.</licence>
+                    <!-- This is only the license for the metadata. Most Epsilon metadata is available under a Creative Comons license. -->
+                </availability>
+                <date when="xxxx"><!-- Put the year the file is created --></date>
+            </publicationStmt>
+            <notesStmt>
+                <!-- These are all notes that can cover some aspects of letters - if you want any of them, simply uncomment these sections -->
+                <!-- TODO: If endorsement required, uncomment this and alter to suit:
+                    <note type="endorsement" subtype="letter">Aug 22<hi rend="superscript">d</hi></note> -->
+                <!-- TODO: IF incomplete, uncomment this and change description to suit:
+               <note type="description">Incomplete</note> 
+                OR, add ‘incomplete’ after description, if required -->
+              
+                <!-- TODO: If postmark required, edit date below:
+                <note type="postmark">DE 16 1836</note> -->
+                <!-- TODO: If datestamp required (this is intended for telegrams which have datestamps rather than postmarks):
+                <note type="datestamp">......</note> -->
+                <!-- TODO: DAR copy:
+                 <relatedItem type="copy"><bibl>CUL DAR 151: 1</bibl></relatedItem> --><!-- This indicates a copy of the letter separate to the original, and simply lists a classmark with a descriptor of the location. The same can be done with drafts, if you use @type='draft' -->
+               
+                <!-- TODO: If published elsewhere:  
+                    <relatedItem type="publication">
+                    <bibl><hi rend="italic">ML</hi> 1: 383</bibl>
+                </relatedItem>-->
+                
+            </notesStmt>
+            <sourceDesc>
+                <bibl type="provenance"><!--  If you want the prvenance of a letter written out a particular, human-readable way, it can go here --></bibl>
+                <!-- TODO:
+                     Detailed information about the source of the item comes below
+                     Use msDesc to describe each manuscript item the letter is derived from
+                -->
+                <msDesc>
+                    <msIdentifier>
+                        <repository key="../repo/repo_106.xml"><!--This key assumes you have an authority list of repositories where letters are held. If not, remove the @key and simply put in the text for the repo. If the letters are all only in one or two repositories, they can be described here at more length --></repository>
+                        
+                        <collection><!--TODO: collection name, eg DAR. Delete if not needed--></collection>
+                        <idno><!--TODO: classmark, eg 171: 48--></idno>
+                    </msIdentifier>
+                </msDesc>
+                <!-- For a printed source use bibl with the attribute printedSource:
+                <bibl type="printedSource">LL 3: 237</bibl> -->
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <!-- TODO: Metadata about the correspondents go here -->
+            <correspDesc>
+                <!-- TODO: Sender -->
+                <correspAction type="sent">
+                    <persName key="../nameregs/nameregs_1.xml"><!-- Person-readable version of name --></persName>
+                    <!-- TODO: use persName for an individual or group of individuals
+                               orgName for an organisation
+                    -->
+                    <!-- TODO: be sure to point @key to the right file if you are using separate files. If pointing to an external resource use @ref instead.  -->
+                    <placeName><!-- Place letter was sent from, as it should appear in the metadata in the sidebar --></placeName>
+                    <!-- TODO: EDIT or delete if not needed -->
+                    <date when="yyyy-mm-dd"><!-- Put computer-readable date in the @when or @notBefore and @notAfter, with text version of date in the element. For advice on more complex dates, contact the Epsilon team. --></date>
+                    
+                </correspAction>
+                
+                <!-- TODO: Recipient -->
+                <correspAction type="received">
+                    <persName key="../nameregs/nameregs_3175.xml"><!-- Same as for sender --></persName>
+                    <!-- TODO: use persName for an individual or group of individuals
+                               orgName for an organisation
+                    -->
+                    <!-- Other actions can be recored here, such as forwarding.  -->
+                </correspAction>
+            </correspDesc>
+            <!-- TODO: If you supply a summary uncomment abstract with one or more p elements.
+                       Otherwise, delete
+            -->
+            <!--<abstract>
+                <p>...</p>
+                <p>...</p>
+            </abstract>-->
+        </profileDesc>
+        <revisionDesc> 
+            <!-- TODO: Update the date here -->
+            <change when="yyyy-mm-dd"></change>
+            <!-- TODO: Update the DATE and NAME in the following line.
+                       Be sure to also supply your initials in name's xml:id
+            -->
+            <change when="yyyy-mm-dd" status="transcribed">Transcribed by <name xml:id="">NAME</name></change>
+            <!-- Add a <change> entry with status="released" when the text is live; without it only the metadata appears in Epsilon. -->
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="letter">
+                <div type="text">
+                    <opener>
+                        <!-- TODO: Edit the following, deleting elements that aren't required -->
+                        <placeName>Weimar</placeName>
+                        <date>2 Juni 1875.</date>
+                        <seg type="supplemental"><!-- FOR EXAMPLE Mr Charles Darwin Esq --></seg>
+                        <salute>Sehr geehrter Herr!</salute>
+                    </opener>
+                    <div type="transcription">
+                        <p><!-- TRANSCRIPTION GOES HERE --></p>
+                    </div>
+                </div>
+                <!-- TODO: If an enclosure is required, uncomment the following and transcribe the enclosure. If it is a whole other letter, it should be set out as a letter, complete with <opener> at the top just before the <div type="transcription>. If it's something else that was enclosed in a letter, the subtype will be "other". If there are more than one enclosure, add a separate <div type="enclosure"> for each of them and number each of them using the attribute n="NUM" -->
+                
+                <!--
+                <div type="enclosure" subtype="letter">
+                    <div type="transcription">
+                        <p></p>
+                    </div>
+                </div>
+                -->
+              
+            </div>
+            <!-- TODO: If you want to include a translation of the letter into another language, uncomment the following, otherwise delete -->
+            
+            <!--
+            <div type="translation">
+                <div type="text">
+                    <opener>
+                        <placeName></placeName>
+                        <date>.</date>
+                        <salute>!</salute>
+                    </opener>
+                    <div type="transcription">
+                        <p>TRANSLATION GOES HERE</p>
+                    </div>
+                </div>
+            </div>
+            -->
+            
+        </body>
+    </text>
+</TEI>

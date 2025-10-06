@@ -1,0 +1,34 @@
+epsilon_name,token_char,default_val,local_name
+doc_id,,,
+doc_id_prefix,,KEMP,
+modification_date,,2024-04-08,
+title,,,
+sender_name_full,,,
+sender_name_canonical,,,From
+sender_surname,,,
+sender_forename,,,
+recipient_name_full,,,
+recipient_name_canonical,,,To
+recipient_surname,,,
+recipient_forename,,,
+letter_date_sorting,,,Date
+letter_date_text,,,Date Text
+letter_date_min,,1788-01-01,
+letter_date_max,,1874-12-31,
+sender_address,,,
+recipient_address,,,
+language,,,
+epsilon_collection_facet,,William Kemp,
+epsilon_collection_name,,The William Kemp Collection,
+sourcedesc_provenance,,,
+sourcedesc_idno,,,Kemp Ref
+sourcedesc_collection,,,
+sourcedesc_repository,,Cambridge University Library,
+publicationstmt_contributor,,Jane Doe,
+publicationstmt_item_url,,,
+publicationstmt_year,,,
+seriestmt_text,,,
+seriesstmt_url,,,
+seriesstmt_collection,,,
+seriesstmt_also_published_in,,,
+summary,,,
