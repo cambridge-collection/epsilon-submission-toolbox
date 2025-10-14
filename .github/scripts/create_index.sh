@@ -40,8 +40,8 @@ for odd_file in $(list_odds); do
     if [ -f "$rng_path" ]; then
       printf -- '- Use the Epsilon %s schema in your TEI letter transcriptions:\n\n' "$base"
       printf -- '  ```xml\n'
-      printf -- '  <?xml-model href="https://raw.githubusercontent.com/cambridge-collection/epsilon-submission-toolbox/dev/tei/rng/%s.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>\n' "$base"
-      printf -- '  <?xml-model href="https://raw.githubusercontent.com/cambridge-collection/epsilon-submission-toolbox/dev/tei/rng/%s.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>\n' "$base"
+      printf -- '  <?xml-model href="https://raw.githubusercontent.com/cambridge-collection/epsilon-submission-toolbox/main/tei/rng/%s.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>\n' "$base"
+      printf -- '  <?xml-model href="https://raw.githubusercontent.com/cambridge-collection/epsilon-submission-toolbox/main/tei/rng/%s.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>\n' "$base"
       printf -- '  ```\n'
     fi
     printf -- '- Validate your TEI files against this schema before submission.\n\n'
