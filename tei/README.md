@@ -17,8 +17,8 @@ layout: default
 - Use the Epsilon letters schema in your TEI letter transcriptions:
 
   ```xml
-  <?xml-model href="https://raw.githubusercontent.com/cambridge-collection/epsilon-submission-toolbox/dev/tei/rng/letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-  <?xml-model href="https://raw.githubusercontent.com/cambridge-collection/epsilon-submission-toolbox/dev/tei/rng/letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+  <?xml-model href="https://raw.githubusercontent.com/cambridge-collection/epsilon-submission-toolbox/main/tei/rng/letters.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+  <?xml-model href="https://raw.githubusercontent.com/cambridge-collection/epsilon-submission-toolbox/main/tei/rng/letters.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   ```
 - Validate your TEI files against this schema before submission.
 
