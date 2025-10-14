@@ -1,6 +1,7 @@
 ---
 title: Epsilon Submission Toolbox
 layout: default
+permalink: /
 ---
 
 # Epsilon Submission Toolbox
