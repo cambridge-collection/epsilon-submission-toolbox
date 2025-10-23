@@ -8,7 +8,13 @@ permalink: /
 
 Use this toolbox to decide how to prepare your collection for [Epsilon](http://epsilon.ac.uk).
 
-## I. Choose your submission pathway
+## I. Get the Toolbox
+
+1. You can obtain a copy of the toolbox by either
+   - [downloading and unzipping it](https://github.com/cambridge-collection/epsilon-submission-toolbox/archive/refs/heads/main.zip)
+   - or by cloning [our repository](https://github.com/cambridge-collection/epsilon-submission-toolbox) using Git.
+
+## II. Choose your submission pathway
 
 1. Decide what you are delivering.
    - Do you only have metadata about the letters or transcriptions in separate word processor or HTML files? Follow the [CSV submission guidelines](https://cambridge-collection.github.io/epsilon-submission-toolbox/csv/docs/README.html).
