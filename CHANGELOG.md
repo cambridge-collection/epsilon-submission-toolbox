@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://github.com/cambridge-collection/epsilon-submission-toolbox/compare/v1.0.2...v1.0.3) (2026-01-22)
+
+
+### Bug Fixes
+
+* **mode:** change, not add [@key](https://github.com/key) ([7a9462d](https://github.com/cambridge-collection/epsilon-submission-toolbox/commit/7a9462d3d1e8360a721e02db906c7b90bf4dd06d))
+
 ## [1.0.2](https://github.com/cambridge-collection/epsilon-submission-toolbox/compare/v1.0.1...v1.0.2) (2025-10-23)
 
 ## [1.0.1](https://github.com/cambridge-collection/epsilon-submission-toolbox/compare/v1.0.0...v1.0.1) (2025-10-14)
