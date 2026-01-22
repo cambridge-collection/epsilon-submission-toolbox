@@ -1963,7 +1963,7 @@
                            <attDef ident="cert" mode="change">
                                <!--NEW-->
                            </attDef>
-                           <attDef ident="key" usage="opt" mode="add">
+                           <attDef ident="key" usage="opt" mode="change">
                                <desc xml:lang="en" versionDate="2016-05-06">Points to the bibl authority file when the letter is from a printed source - i.e. "../bibliographies/bibl_1.xml"</desc>
                                <datatype><ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.pointer"/>
                                </datatype>
