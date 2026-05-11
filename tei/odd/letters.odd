@@ -3595,6 +3595,7 @@
                        <attList>
                            <attDef ident="hand" mode="change"/>
                            <attDef ident="n" mode="change"/>
+                           <attDef ident="rend" mode="change"/>
                            <attDef ident="subtype" mode="change">
                                <desc versionDate="2016-05-07" xml:lang="en">marks the subtype of an enclosure. Valid values include '<val>letter</val>'<!--, '<val>translation</val>'--> and '<val>other</val>.</desc>
                                <valList type="closed" mode="replace">
@@ -3629,7 +3630,6 @@
                            <attDef ident="facs" mode="delete"/>
                            <attDef ident="next" mode="delete"/>
                            <attDef ident="prev" mode="delete"/>
-                           <attDef ident="rend" mode="delete"/>
                            <attDef ident="rendition" mode="delete"/>
                            <attDef ident="resp" mode="delete"/>
                            <attDef ident="sameAs" mode="delete"/>
@@ -4566,6 +4566,8 @@
                            <memberOf key="att.written" mode="delete"/>
                        </classes>
                        <attList>
+                           <attDef ident="height" mode="change"/>
+                           <attDef ident="width" mode="change"/>
                            <attDef ident="rend" usage="opt" mode="change"><gloss versionDate="2014-06-03" xml:lang="en">rendition</gloss>
                                <valList type="closed" mode="replace">
                                    <valItem ident="floatRight"/>
@@ -4603,7 +4605,7 @@
                            <attDef ident="corresp" mode="delete"/>
                            <attDef ident="exclude" mode="delete"/>
                            <attDef ident="facs" mode="delete"/>
-                           <attDef ident="height" mode="delete"/>
+                           <attDef ident="generatedBy" mode="delete"/>
                            <attDef ident="n" mode="delete"/>
                            <attDef ident="next" mode="delete"/>
                            <attDef ident="prev" mode="delete"/>
@@ -4616,7 +4618,6 @@
                            <attDef ident="subtype" mode="delete"/>
                            <attDef ident="synch" mode="delete"/>
                            <attDef ident="type" mode="delete"/>
-                           <attDef ident="width" mode="delete"/>
                            <attDef ident="xml:base" mode="delete"/>
                            <attDef ident="xml:id" mode="delete"/>
                            <attDef ident="xml:lang" mode="delete"/>
@@ -4658,10 +4659,10 @@
                    </elementSpec>
                    
                    <elementSpec module="figures" ident="row" mode="change">
-                       <classes mode="change">
-                           <memberOf key="att.tableDecoration" mode="delete"/>
-                       </classes>
                        <attList>
+                           <attDef ident="role" mode="change"/>
+                           <attDef ident="rows" mode="change"/>
+                           <attDef ident="cols" mode="change"/>
                            <attDef ident="rend" usage="opt" mode="change"><gloss versionDate="2014-06-03" xml:lang="en">rendition</gloss>
                                <valList type="closed" mode="replace">
                                    <valItem ident="borderAll"/>
@@ -4712,6 +4713,8 @@
                            <memberOf key="att.typed" mode="delete"/>
                        </classes>
                        <attList>
+                           <attDef ident="cols" mode="change"/>
+                           <attDef ident="rows" mode="change"/>
                            <attDef ident="rend" usage="opt" mode="change"><gloss versionDate="2014-06-03" xml:lang="en">rendition</gloss>
                                <valList type="closed" mode="replace">
                                    <valItem ident="inlineBlock"/>
@@ -4792,7 +4795,6 @@
                            <attDef ident="ana" mode="delete"/>
                            <attDef ident="cert" mode="delete"/>
                            <attDef ident="change" mode="delete"/>
-                           <attDef ident="cols" mode="delete"/>
                            <attDef ident="copyOf" mode="delete"/>
                            <attDef ident="corresp" mode="delete"/>
                            <attDef ident="exclude" mode="delete"/>
@@ -4802,7 +4804,6 @@
                            <attDef ident="prev" mode="delete"/>
                            <attDef ident="rendition" mode="delete"/>
                            <attDef ident="resp" mode="delete"/>
-                           <attDef ident="rows" mode="delete"/>
                            <attDef ident="sameAs" mode="delete"/>
                            <attDef ident="select" mode="delete"/>
                            <attDef ident="source" mode="delete"/>
