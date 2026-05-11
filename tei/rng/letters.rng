@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2026-01-22T09:19:08Z. . 
+Schema generated from ODD source 2026-05-11T15:25:09Z. . 
 TEI Edition: P5 Version 4.9.0. Last updated on 24th January 2025, revision 6795113f8 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/ 
   
@@ -8664,6 +8664,18 @@ Suggested values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 
             </attribute>
          </optional>
          <optional>
+            <attribute name="rend">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(rendition) indicates how the element in question was rendered or presented in the source text.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="token">
+                        <param name="pattern">[^\p{C}\p{Z}]+</param>
+                     </data>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">marks the type of division in the transcription.</a:documentation>
                <choice>
@@ -10475,6 +10487,18 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
                </list>
             </attribute>
          </optional>
+         <optional>
+            <attribute name="rows">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(rows) indicates the number of rows in the table.</a:documentation>
+               <data type="nonNegativeInteger"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="cols">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(columns) indicates the number of columns in each row of the table.</a:documentation>
+               <data type="nonNegativeInteger"/>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
@@ -10511,6 +10535,39 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
                      </choice>
                   </oneOrMore>
                </list>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                       name="role"
+                       a:defaultValue="data">
+               <a:documentation>(role) indicates the kind of information held in this cell or in each cell of this row.
+Suggested values include: 1] label; 2] data</a:documentation>
+               <choice>
+                  <value>label</value>
+                  <a:documentation>labelling or descriptive information only.</a:documentation>
+                  <value>data</value>
+                  <a:documentation>data values.</a:documentation>
+                  <data type="token">
+                     <param name="pattern">[^\p{C}\p{Z}]+</param>
+                  </data>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                       name="rows"
+                       a:defaultValue="1">
+               <a:documentation>(rows) indicates the number of rows occupied by this cell or row.</a:documentation>
+               <data type="nonNegativeInteger"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                       name="cols"
+                       a:defaultValue="1">
+               <a:documentation>(columns) indicates the number of columns occupied by this cell or row.</a:documentation>
+               <data type="nonNegativeInteger"/>
             </attribute>
          </optional>
          <empty/>
@@ -10638,7 +10695,6 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
                <ref name="tei_model.divBottom"/>
             </choice>
          </zeroOrMore>
-         <ref name="tei_att.cmc.attributes"/>
          <optional>
             <attribute name="rend">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(rendition) indicates how the element in question was rendered or presented in the source text.</a:documentation>
