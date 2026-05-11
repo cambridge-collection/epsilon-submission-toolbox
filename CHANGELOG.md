@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.5](https://github.com/cambridge-collection/epsilon-submission-toolbox/compare/v1.0.4...v1.0.5) (2026-05-11)
+
+
+### Bug Fixes
+
+* **attrs:** add some attrs in that are used in some builds ([849364a](https://github.com/cambridge-collection/epsilon-submission-toolbox/commit/849364afb72154c2eb69ac43acb716ffca93a42f))
+
 ## [1.0.4](https://github.com/cambridge-collection/epsilon-submission-toolbox/compare/v1.0.3...v1.0.4) (2026-01-22)
 
 
